@@ -1,0 +1,235 @@
+/*--------------------------------------------------
+1. RESET & GLOBAL STYLES
+--------------------------------------------------*/
+
+/* Universal selector to reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background with fallback color and image */
+body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+
+/*--------------------------------------------------
+2. HEADER STYLES
+--------------------------------------------------*/
+
+#navbar {
+  background-color: #444;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Navbar links */
+#navbar a:link,
+#navbar a:visited {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+#navbar a:hover {
+  color: yellow;
+}
+
+#navbar a:active {
+  color: orange;
+}
+
+/* Remove bullets from nav if list used */
+nav ul {
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+}
+
+nav li {
+  margin: 10px;
+}
+
+/*--------------------------------------------------
+3. TYPOGRAPHY STYLES
+--------------------------------------------------*/
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Style all h2 headers */
+h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Group selector for h3, p */
+h3,
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+/*--------------------------------------------------
+4. MAIN HEADER BANNER
+--------------------------------------------------*/
+
+/* ID selector for main header */
+#mainHeader {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* CTA button */
+.cta-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+/*--------------------------------------------------
+5. EVENT CARD STYLES
+--------------------------------------------------*/
+
+/* Class selector for event cards */
+.eventCard {
+  border: 1px solid #ccc;
+  margin: 15px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Box model: margin, border, padding, outline */
+.eventCard:hover {
+  outline: 2px solid #ff6600;
+}
+
+/*--------------------------------------------------
+6. TABLE STYLING
+--------------------------------------------------*/
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+
+th,
+td {
+  border: 1px solid #999;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Zebra striping for rows */
+tr:nth-child(even) {
+  background-color: #e6f2ff;
+}
+
+/*--------------------------------------------------
+7. FORM STYLING
+--------------------------------------------------*/
+
+input,
+select,
+textarea {
+  padding: 8px;
+  margin: 5px;
+  width: 100%;
+  max-width: 300px;
+  display: inline-block;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px dashed #0099cc;
+}
+
+/*--------------------------------------------------
+8. SECTION HEADERS WITH GRADIENT
+--------------------------------------------------*/
+
+section h2 {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  padding: 10px 0;
+}
+
+/*--------------------------------------------------
+9. MULTI-COLUMN LAYOUT
+--------------------------------------------------*/
+
+.news-article {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/*--------------------------------------------------
+10. RESPONSIVE DESIGN
+--------------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgBorder {
+    width: 100%;
+    height: auto;
+  }
+
+  h2,
+  p {
+    font-size: 16px;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 90%;
+  }
+}
+
+/*--------------------------------------------------
+11. DEBUGGING & TESTING TIPS
+--------------------------------------------------*/
+
+/*
+Use DevTools (F12) → Device Toolbar (Ctrl + Shift + M)
+Check: Styles, Network tab → confirm this CSS loads
+Inspect elements → test changes live
+*/
