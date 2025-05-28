@@ -4,20 +4,21 @@ public class SimpleCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Input numbers
-        System.out.print("Enter first number: ");
+        // Prompt user for two numbers
+        System.out.print("Enter the first number: ");
         double num1 = scanner.nextDouble();
 
-        System.out.print("Enter second number: ");
+        System.out.print("Enter the second number: ");
         double num2 = scanner.nextDouble();
 
-        // Input operation
-        System.out.println("Choose operation: +, -, *, /");
-        char operator = scanner.next().charAt(0);
+        // Prompt user for an operation
+        System.out.println("Choose an operation: +, -, *, /");
+        char operation = scanner.next().charAt(0);
 
         double result;
 
-        switch (operator) {
+        // Perform operation
+        switch (operation) {
             case '+':
                 result = num1 + num2;
                 System.out.println("Result: " + result);
@@ -35,11 +36,11 @@ public class SimpleCalculator {
                     result = num1 / num2;
                     System.out.println("Result: " + result);
                 } else {
-                    System.out.println("Error: Cannot divide by zero!");
+                    System.out.println("Error: Cannot divide by zero.");
                 }
                 break;
             default:
-                System.out.println("Invalid operator.");
+                System.out.println("Invalid operation.");
         }
 
         scanner.close();
