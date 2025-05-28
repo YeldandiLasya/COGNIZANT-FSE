@@ -3,25 +3,21 @@ import java.util.Scanner;
 public class GradeCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("Enter marks out of 100: ");
         int marks = scanner.nextInt();
 
-        char grade;
-
         if (marks >= 90 && marks <= 100) {
-            grade = 'A';
+            System.out.println("Grade: A");
         } else if (marks >= 80) {
-            grade = 'B';
+            System.out.println("Grade: B");
         } else if (marks >= 70) {
-            grade = 'C';
+            System.out.println("Grade: C");
         } else if (marks >= 60) {
-            grade = 'D';
+            System.out.println("Grade: D");
         } else {
-            grade = 'F';
+            System.out.println("Grade: F");
         }
 
-        System.out.println("Grade: " + grade);
         scanner.close();
     }
 }
