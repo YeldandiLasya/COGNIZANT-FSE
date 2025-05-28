@@ -3,26 +3,25 @@ import java.util.Random;
 
 public class NumberGuessingGame {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         Random random = new Random();
+        int target = random.nextInt(100) + 1;
+        Scanner scanner = new Scanner(System.in);
+        int guess = 0;
 
-        int target = random.nextInt(100) + 1; // Random number from 1 to 100
-        int guess;
+        System.out.println("Guess the number between 1 and 100:");
 
-        System.out.println("Guess the number between 1 and 100!");
-
-        do {
+        while (guess != target) {
             System.out.print("Enter your guess: ");
             guess = scanner.nextInt();
 
-            if (guess > target) {
-                System.out.println("Too high!");
-            } else if (guess < target) {
-                System.out.println("Too low!");
+            if (guess < target) {
+                System.out.println("Too low! Try again.");
+            } else if (guess > target) {
+                System.out.println("Too high! Try again.");
             } else {
-                System.out.println("Correct! You guessed the number.");
+                System.out.println("Congratulations! You guessed it right.");
             }
-        } while (guess != target);
+        }
 
         scanner.close();
     }
