@@ -1,15 +1,15 @@
 public class DataType {
     public static void main(String[] args) {
-        int intVar = 100;
-        float floatVar = 10.5f;
-        double doubleVar = 99.99;
-        char charVar = 'A';
-        boolean booleanVar = true;
+        int age = 25;
+        float height = 5.9f;
+        double weight = 68.75;
+        char grade = 'A';
+        boolean isStudent = true;
 
-        System.out.println("Integer Value: " + intVar);
-        System.out.println("Float Value: " + floatVar);
-        System.out.println("Double Value: " + doubleVar);
-        System.out.println("Character Value: " + charVar);
-        System.out.println("Boolean Value: " + booleanVar);
+        System.out.println("Integer: " + age);
+        System.out.println("Float: " + height);
+        System.out.println("Double: " + weight);
+        System.out.println("Character: " + grade);
+        System.out.println("Boolean: " + isStudent);
     }
 }
